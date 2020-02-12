@@ -78,14 +78,14 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectImage = styled(Image)`
-  width: ${CARD_HEIGHT};
+  width: 100px;
   height: auto;
   padding: 40px;
   margin-top: 0px;
 
   ${MEDIA_QUERY_SMALL} {
     height: auto;
-    width: calc(${CARD_HEIGHT} / 2);
+    width: 50px;
     margin-top: calc(${CARD_HEIGHT} / 4);
     padding: 10px;
   }
