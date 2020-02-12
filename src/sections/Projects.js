@@ -90,12 +90,10 @@ const ProjectImage = styled(Image)`
 
 const ProjectTag = styled.div`
   position: relative;
-  height: ${CARD_HEIGHT};
-  top: calc(
-    -${CARD_HEIGHT} - 3.5px
-  ); /*don't know why I have to add 3.5px here ... */
+  height: 200px;
+  top: -203.5px;
   ${MEDIA_QUERY_SMALL} {
-    top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
+    top: -153.5px;
   }
 `;
 
