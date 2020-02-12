@@ -70,10 +70,10 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   margin: auto;
-  width: ${CARD_HEIGHT};
+  width: 100px;
 
   ${MEDIA_QUERY_SMALL} {
-    width: calc(${CARD_HEIGHT} / 2);
+    width: 50px;
   }
 `;
 
