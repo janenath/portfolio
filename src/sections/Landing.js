@@ -76,18 +76,28 @@ const LandingPage = () => (
               fontSize={[5, 6, 8]}
               mb={[3, 4, 5]}
             >
-              {`Hello, I'm ${name}!`}
+              {`${name}`}
+            </Heading>
+            
+            <Heading
+              textAlign="center"
+              as="h2"
+              color="primary"
+              fontSize={[3, 4, 5]}
+              mb={[3, 4, 5]}
+            >
+              {`Full Stack Software Engineer`}
             </Heading>
 
             <Heading
               as="h2"
               color="primary"
-              fontSize={[4, 5, 6]}
+              fontSize={[2, 3, 4]}
               mb={[3, 5]}
               textAlign="center"
               style={centerHorizontally}
             >
-              <TextLoop interval={5000}>
+              <TextLoop interval={1500}>
                 {roles
                   .sort(() => deterministicBehaviour || Math.random() - 0.5)
                   .map(text => (
