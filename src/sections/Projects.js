@@ -44,7 +44,7 @@ const Background = () => (
   </div>
 );
 
-const CARD_HEIGHT = '300px';
+const CARD_HEIGHT = '200px';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -70,22 +70,22 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   margin: auto;
-  width: 100px;
+  width: ${CARD_HEIGHT};
 
   ${MEDIA_QUERY_SMALL} {
-    width: 50px;
+    width: calc(${CARD_HEIGHT} / 2);
   }
 `;
 
 const ProjectImage = styled(Image)`
-  width: 50px;
-  height: auto;
+  width: ${CARD_HEIGHT};
+  height: ${CARD_HEIGHT};
   padding: 40px;
   margin-top: 0px;
 
   ${MEDIA_QUERY_SMALL} {
-    height: auto;
-    width: 25px;
+    height: calc(${CARD_HEIGHT} / 2);
+    width: calc(${CARD_HEIGHT} / 2);
     margin-top: calc(${CARD_HEIGHT} / 4);
     padding: 10px;
   }
