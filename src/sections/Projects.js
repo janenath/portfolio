@@ -10,6 +10,7 @@ import SocialLink from '../components/SocialLink';
 import Triangle from '../components/Triangle';
 import ImageSubtitle from '../components/ImageSubtitle';
 import Hide from '../components/Hide';
+
 const Background = () => (
   <div>
     <Triangle
@@ -18,12 +19,14 @@ const Background = () => (
       width={['100vw', '100vw']}
       invertX
     />
+
     <Triangle
       color="background"
       height={['50vh', '20vh']}
       width={['50vw', '50vw']}
       invertX
     />
+
     <Triangle
       color="primaryDark"
       height={['25vh', '40vh']}
@@ -31,6 +34,7 @@ const Background = () => (
       invertX
       invertY
     />
+
     <Triangle
       color="backgroundDark"
       height={['25vh', '20vh']}
@@ -51,6 +55,7 @@ const Title = styled(Text)`
   display: table;
   border-bottom: ${props => props.theme.colors.primary} 5px solid;
 `;
+
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,6 +66,7 @@ const TextContainer = styled.div`
     width: calc(100% - (${CARD_HEIGHT} / 2));
   }
 `;
+
 const ImageContainer = styled.div`
   margin: auto;
   width: ${CARD_HEIGHT};
@@ -68,6 +74,7 @@ const ImageContainer = styled.div`
     width: calc(${CARD_HEIGHT} / 2);
   }
 `;
+
 const ProjectImage = styled(Image)`
   width: ${CARD_HEIGHT};
   height: ${CARD_HEIGHT};
@@ -80,16 +87,18 @@ const ProjectImage = styled(Image)`
     padding: 10px;
   }
 `;
+
 const ProjectTag = styled.div`
   position: relative;
   height: ${CARD_HEIGHT};
   top: calc(
-    ${CARD_HEIGHT} - 3.5px
+    -${CARD_HEIGHT} - 3.5px
   ); /*don't know why I have to add 3.5px here ... */
   ${MEDIA_QUERY_SMALL} {
-    top: calc(${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
+    top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
   }
 `;
+
 const Project = ({
   name,
   description,
@@ -111,6 +120,7 @@ const Project = ({
           {description}
         </Text>
       </TextContainer>
+
       <ImageContainer>
         <ProjectImage src={logo.image.src} alt={logo.title} />
         <ProjectTag>
@@ -145,6 +155,7 @@ const Project = ({
     </Flex>
   </Card>
 );
+
 Project.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -159,9 +170,10 @@ Project.propTypes = {
     title: PropTypes.string,
   }).isRequired,
 };
+
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="" label="notebook" />
+    <Section.Header name="Projects" icon="" label="" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
@@ -196,4 +208,5 @@ const Projects = () => (
     />
   </Section.Container>
 );
+
 export default Projects;
