@@ -49,7 +49,7 @@ const CARD_HEIGHT = '300px';
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Title = styled(Text)`
-  font-size: 14px;
+  font-size: 26px;
   font-weight: 600;
   text-transform: uppercase;
   display: table;
@@ -59,7 +59,7 @@ const Title = styled(Text)`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
   width: calc(100% - ${CARD_HEIGHT});
 
@@ -78,8 +78,8 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectImage = styled(Image)`
-  width: 50px;
-  height: auto;
+  width: 300px;
+  height: 250px;
   padding: 40px;
   margin-top: 0px;
 
@@ -94,9 +94,9 @@ const ProjectImage = styled(Image)`
 const ProjectTag = styled.div`
   position: relative;
   height: ${CARD_HEIGHT};
-  top: calc(
-    -${CARD_HEIGHT} - 3.5px
-  ); /*don't know why I have to add 3.5px here ... */
+  // top: calc(
+  //   -${CARD_HEIGHT} - 3.5px
+  // ); /*don't know why I have to add 3.5px here ... */
 
   ${MEDIA_QUERY_SMALL} {
     top: calc(-${CARD_HEIGHT} - 3.5px + (${CARD_HEIGHT} / 4));
@@ -148,9 +148,9 @@ const Project = ({
               />
             </Box>
           </Flex>
-          <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
+          {/* <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
             {type}
-          </ImageSubtitle>
+          </ImageSubtitle> */}
           <Hide query={MEDIA_QUERY_SMALL}>
             <ImageSubtitle bg="backgroundDark">{publishedDate}</ImageSubtitle>
           </Hide>

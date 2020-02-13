@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: Cabin, 'Open Sans', sans-serif;
     font-display: swap;
+    font-size: 26px;
     font-display: fallback;
     overflow-x: hidden;
   }
