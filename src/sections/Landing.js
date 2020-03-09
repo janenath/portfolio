@@ -73,12 +73,12 @@ const LandingPage = () => (
               textAlign="center"
               as="h1"
               color="primary"
-              fontSize={[5, 6, 8]}
+              fontSize={120}
               mb={[3, 4, 5]}
             >
               {`${name}`}
             </Heading>
-            
+
             <Heading
               textAlign="center"
               as="h2"
